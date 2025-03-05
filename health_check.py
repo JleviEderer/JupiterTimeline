@@ -39,12 +39,14 @@ class HealthCheckHandler(BaseHTTPRequestHandler):
 def start_health_check_server(port=7860):
     """Start a simple HTTP server to handle health checks"""
     try:
-        server_address = ('', port)
+        server_address = ('0.0.0.0', port)
         httpd = HTTPServer(server_address, HealthCheckHandler)
-        logger.info(f"Starting health check server on port {port}")
+        logger.info(f"Starting health check server on 0.0.0.0:{port}")
+        print(f"Health check server starting on 0.0.0.0:{port}")
         httpd.serve_forever()
     except Exception as e:
         logger.error(f"Failed to start health check server: {e}")
+        print(f"Failed to start health check server: {e}")
 
 if __name__ == "__main__":
     start_health_check_server()
