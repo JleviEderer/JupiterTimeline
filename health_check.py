@@ -36,7 +36,7 @@ class HealthCheckHandler(BaseHTTPRequestHandler):
         """Override to avoid duplicate logging"""
         return
 
-def start_health_check_server(port=8080):
+def start_health_check_server(port=7860):
     """Start a simple HTTP server to handle health checks"""
     try:
         server_address = ('', port)
