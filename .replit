@@ -1,0 +1,23 @@
+
+run = "bash run.sh"
+modules = ["python-3.11"]
+
+[nix]
+channel = "stable-23_11"
+
+[deployment]
+run = ["sh", "-c", "bash run.sh"]
+deploymentTarget = "cloudrun"
+ignorePorts = false
+build = ""
+publicDir = ""
+healthCheckPath = "/health"
+buildCommand = ""
+
+[[ports]]
+localPort = 7860
+externalPort = 80
+
+[[ports]]
+localPort = 8080
+externalPort = 8080

@@ -1,0 +1,29 @@
+streamlit.errors.StreamlitInvalidFormCallbackError: Within a form, callbacks can only be defined on st.form_submit_button. Defining callbacks on other widgets inside a form is not allowed.
+
+Traceback:
+File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 121, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in code_to_exec
+    exec(code, module.__dict__)
+File "/home/runner/workspace/app.py", line 136, in <module>
+    main()
+File "/home/runner/workspace/app.py", line 44, in main
+    show_edit_project()
+File "/home/runner/workspace/app.py", line 58, in show_edit_project
+    form.render()
+File "/home/runner/workspace/components/forms.py", line 60, in render
+    start_date = st.date_input("Start Date", key="start_date", on_change=calculate_months)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/streamlit/runtime/metrics_util.py", line 410, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/streamlit/elements/widgets/time_widgets.py", line 807, in date_input
+    return self._date_input(
+           ^^^^^^^^^^^^^^^^^
+File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/streamlit/elements/widgets/time_widgets.py", line 842, in _date_input
+    check_widget_policies(
+File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/streamlit/elements/lib/policies.py", line 176, in check_widget_policies
+    check_callback_rules(dg, on_change)
+File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/streamlit/elements/lib/policies.py", line 53, in check_callback_rules
+    raise StreamlitInvalidFormCallbackError()

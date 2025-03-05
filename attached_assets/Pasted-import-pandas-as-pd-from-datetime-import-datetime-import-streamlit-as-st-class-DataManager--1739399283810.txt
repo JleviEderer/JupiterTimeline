@@ -1,0 +1,99 @@
+import pandas as pd
+from datetime import datetime
+import streamlit as st
+
+class DataManager:
+    def __init__(self):
+        self.file_path = "data/projects.csv"
+        self.items_path = "data/items.csv"
+        self.load_data()
+    
+    def load_data(self):
+        try:
+            self.data = pd.read_csv(self.file_path)
+            if 'Target COD' in self.data.columns:
+                self.data['Target COD'] = pd.to_datetime(self.data['Target COD'], format='mixed')
+        except FileNotFoundError:
+            self.data = pd.DataFrame(columns=[
+                'ID', 'Name', 'ISO', 'Voltage', 'Capacity', 'Duration', 'Target COD'
+            ])
+            self.save_data()
+    
+    def save_data(self):
+        self.data.to_csv(self.file_path, index=False)
+    
+    def get_project_items(self, project_id):
+        try:
+            items_df = pd.read_csv(self.items_path)
+            # Ensure Team column exists
+            if 'Team' not in items_df.columns:
+                items_df['Team'] = ''
+            
+            items_df['Start Date'] = pd.to_datetime(items_df['Start Date']).dt.date
+            items_df['End Date'] = pd.to_datetime(items_df['End Date']).dt.date
+            return items_df[items_df['Project ID'] == project_id]
+        except FileNotFoundError:
+            return pd.DataFrame(columns=['Item ID', 'Project ID', 'Item Name', 'Team', 'Start Date', 'End Date', 'Months'])
+    
+    def save_project_items(self, items_df):
+        try:
+            # Read existing items to preserve data
+            existing_items = pd.read_csv(self.items_path)
+        except FileNotFoundError:
+            existing_items = pd.DataFrame(columns=['Item ID', 'Project ID', 'Item Name', 'Team', 'Start Date', 'End Date', 'Months'])
+        
+        # Ensure Team column exists in both DataFrames
+        if 'Team' not in items_df.columns:
+            items_df['Team'] = ''
+        if 'Team' not in existing_items.columns:
+            existing_items['Team'] = ''
+        
+        # Update existing items with new data
+        for index, row in items_df.iterrows():
+            mask = existing_items['Item ID'] == row['Item ID']
+            if mask.any():
+                existing_items.loc[mask] = row
+            else:
+                existing_items = pd.concat([existing_items, pd.DataFrame([row])], ignore_index=True)
+        
+        # Convert dates to string format before saving
+        existing_items['Start Date'] = pd.to_datetime(existing_items['Start Date']).dt.strftime('%Y-%m-%d')
+        existing_items['End Date'] = pd.to_datetime(existing_items['End Date']).dt.strftime('%Y-%m-%d')
+        
+        # Save the updated DataFrame
+        existing_items.to_csv(self.items_path, index=False)
+    
+    def add_project_item(self, project_id, item_data):
+        try:
+            items_df = pd.read_csv(self.items_path)
+            if 'Team' not in items_df.columns:
+                items_df['Team'] = ''
+        except FileNotFoundError:
+            items_df = pd.DataFrame(columns=['Item ID', 'Project ID', 'Item Name', 'Team', 'Start Date', 'End Date', 'Months'])
+        
+        # Add Team field if not in item_data
+        if 'Team' not in item_data:
+            item_data['Team'] = ''
+            
+        item_data['Item ID'] = f"I{len(items_df) + 1:03d}"
+        item_data['Project ID'] = project_id
+        items_df = pd.concat([items_df, pd.DataFrame([item_data])], ignore_index=True)
+        self.save_project_items(items_df)
+    
+    def update_project_items(self, updated_items_df):
+        """Update items with new team assignments"""
+        # Ensure we have the Team column
+        if 'Team' not in updated_items_df.columns:
+            updated_items_df['Team'] = ''
+        
+        # Save the updated items
+        self.save_project_items(updated_items_df)
+    
+    # Rest of the methods remain the same...
+    def get_team_colors(self):
+        return {
+            'Procurement': '#2196F3',    # Blue
+            'Construction': '#FF9800',   # Orange
+            'Development': '#4CAF50',    # Green
+            'Interconnection': '#9C27B0' # Purple
+        }

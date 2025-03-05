@@ -1,0 +1,72 @@
+import streamlit as st
+from datetime import datetime
+import pandas as pd
+from dateutil.relativedelta import relativedelta
+
+class ProjectForm:
+    def __init__(self, edit_mode=False, project_data=None):
+        self.edit_mode = edit_mode
+        self.project_data = project_data
+
+    def calculate_months(self, start_date, end_date):
+        """Calculate the number of months between two dates, including partial months"""
+        if start_date and end_date:
+            if end_date < start_date:
+                return 1
+            # Using relativedelta for more accurate month calculation
+            r = relativedelta(end_date, start_date)
+            months = r.years * 12 + r.months
+            # Add 1 if there are remaining days
+            if r.days > 0:
+                months += 1
+            return max(1, months)
+        return 1
+
+    def render(self):
+        if self.edit_mode:
+            # Project Details Form remains the same...
+            
+            # Items Management
+            st.subheader("Project Items")
+            items_df = st.session_state.data_manager.get_project_items(self.project_data['ID'])
+
+            # Display existing items
+            if not items_df.empty:
+                st.dataframe(items_df[['Item Name', 'Start Date', 'End Date', 'Months']])
+            
+            with st.form("add_item_form"):
+                item_name = st.text_input("Item Name")
+                col1, col2 = st.columns(2)
+                
+                with col1:
+                    start_date = st.date_input("Start Date", 
+                                             value=datetime.now().date())
+                with col2:
+                    end_date = st.date_input("End Date", 
+                                           value=datetime.now().date())
+                
+                # Calculate months based on current form values
+                months = self.calculate_months(start_date, end_date)
+                
+                months_display = st.number_input("Number of Months", 
+                                               value=months,
+                                               min_value=1,
+                                               disabled=True)
+                
+                item_submitted = st.form_submit_button("Add Item")
+                
+                if item_submitted:
+                    if all([item_name, start_date, end_date]):
+                        item_data = {
+                            'Item Name': item_name,
+                            'Start Date': start_date,
+                            'End Date': end_date,
+                            'Months': months  # Use calculated months
+                        }
+                        st.session_state.data_manager.add_project_item(self.project_data['ID'], item_data)
+                        st.success("Item added successfully!")
+                        st.rerun()
+                    else:
+                        st.error("Please fill in all item fields.")
+
+        # Rest of the code remains the same...

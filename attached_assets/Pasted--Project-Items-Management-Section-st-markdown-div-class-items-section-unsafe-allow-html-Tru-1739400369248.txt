@@ -1,0 +1,107 @@
+# Project Items Management Section
+st.markdown("<div class='items-section'>", unsafe_allow_html=True)
+st.markdown("## 📋 Project Items Management")
+
+# Get existing items
+items_df = st.session_state.data_manager.get_project_items(project_data['ID'])
+
+# Debug: Show initial data
+st.write("Debug: Initial items_df")
+st.write(items_df)
+
+# Initialize column configuration
+column_config = {
+    "Team": st.column_config.SelectboxColumn(
+        "Team",
+        width="small",
+        options=list(st.session_state.data_manager.get_team_colors().keys()),
+        required=True,
+        help="Team responsible for this item"
+    ),
+    "Item Name": st.column_config.TextColumn(
+        "Item Name", 
+        width="medium",
+        required=True
+    ),
+    "Start Date": st.column_config.DateColumn(
+        "Start Date", 
+        width="small",
+        required=True
+    ),
+    "End Date": st.column_config.DateColumn(
+        "End Date", 
+        width="small",
+        required=True
+    ),
+    "Months": st.column_config.NumberColumn(
+        "Months", 
+        disabled=True, 
+        width="small", 
+        format="%d"
+    )
+}
+
+# Initialize base DataFrame if empty
+if items_df.empty:
+    items_df = pd.DataFrame(columns=['Team', 'Item Name', 'Start Date', 'End Date', 'Months'])
+
+# Calculate months before displaying
+items_df['Months'] = items_df.apply(
+    lambda x: max(1, ((pd.to_datetime(x['End Date']) - pd.to_datetime(x['Start Date'])).days // 30) + 1)
+    if pd.notna(x['Start Date']) and pd.notna(x['End Date'])
+    else 1,
+    axis=1
+)
+
+# Display data editor
+edited_df = st.data_editor(
+    items_df[['Team', 'Item Name', 'Start Date', 'End Date', 'Months']],
+    column_config=column_config,
+    num_rows="dynamic",
+    use_container_width=True,
+    hide_index=True,
+    key=f"items_editor_{selected_id}"
+)
+
+# Debug: Show edited data
+st.write("Debug: Edited DataFrame")
+st.write(edited_df)
+
+# Single save button and save logic
+if st.button("Save Changes", key=f"save_items_{selected_id}"):
+    if edited_df is not None:
+        # Debug: Show pre-save data
+        st.write("Debug: Pre-save DataFrame")
+        st.write(edited_df)
+        
+        # Recalculate months
+        edited_df['Months'] = edited_df.apply(
+            lambda x: max(1, ((pd.to_datetime(x['End Date']) - pd.to_datetime(x['Start Date'])).days // 30) + 1)
+            if pd.notna(x['Start Date']) and pd.notna(x['End Date'])
+            else 1,
+            axis=1
+        )
+        
+        # Add required columns
+        edited_df['Project ID'] = selected_id
+        edited_df['Item ID'] = [f"I{i:03d}" for i in range(1, len(edited_df) + 1)]
+        
+        # Debug: Show final data before save
+        st.write("Debug: Final DataFrame before save")
+        st.write(edited_df)
+        
+        try:
+            # Save changes
+            st.session_state.data_manager.save_project_items(edited_df)
+            st.success("Project items updated successfully!")
+            
+            # Debug: Verify save
+            saved_items = pd.read_csv('data/items.csv')
+            st.write("Debug: Saved data from CSV")
+            st.write(saved_items)
+            
+            st.rerun()
+        except Exception as e:
+            st.error(f"Error saving data: {str(e)}")
+
+st.markdown("</div>", unsafe_allow_html=True)

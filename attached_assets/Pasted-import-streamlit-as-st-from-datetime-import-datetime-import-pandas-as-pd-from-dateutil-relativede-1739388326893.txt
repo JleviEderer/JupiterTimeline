@@ -1,0 +1,104 @@
+import streamlit as st
+from datetime import datetime
+import pandas as pd
+from dateutil.relativedelta import relativedelta
+
+class ProjectForm:
+    def __init__(self, edit_mode=False, project_data=None):
+        self.edit_mode = edit_mode
+        self.project_data = project_data
+
+    def on_date_change(self):
+        """Callback for date changes"""
+        start = st.session_state.start_date_input
+        end = st.session_state.end_date_input
+        
+        # Debug print
+        print(f"Calculating months between {start} and {end}")
+        
+        if start and end:
+            # Get the difference in months
+            diff = relativedelta(end, start)
+            total_months = diff.years * 12 + diff.months
+            
+            # Add 1 if there are any remaining days
+            if diff.days > 0:
+                total_months += 1
+            
+            # Ensure minimum of 1 month
+            st.session_state.months = max(1, total_months)
+            
+            # Debug print
+            print(f"Calculated {st.session_state.months} months")
+
+    def render(self):
+        if self.edit_mode:
+            # Project Details Form remains the same...
+            
+            # Items Management
+            st.subheader("Project Items")
+            items_df = st.session_state.data_manager.get_project_items(self.project_data['ID'])
+
+            if not items_df.empty:
+                st.dataframe(items_df[['Item Name', 'Start Date', 'End Date', 'Months']])
+
+            # Initialize months in session state
+            if 'months' not in st.session_state:
+                st.session_state.months = 1
+
+            # Date inputs outside form
+            col1, col2 = st.columns(2)
+            
+            with col1:
+                start_date = st.date_input(
+                    "Start Date",
+                    value=datetime.now().date(),
+                    key='start_date_input',
+                    on_change=self.on_date_change
+                )
+            
+            with col2:
+                end_date = st.date_input(
+                    "End Date",
+                    value=datetime.now().date(),
+                    key='end_date_input',
+                    on_change=self.on_date_change
+                )
+
+            # Debug info
+            st.write("Debug Info:")
+            st.write(f"Start Date: {start_date}")
+            st.write(f"End Date: {end_date}")
+            st.write(f"Raw month calculation: {relativedelta(end_date, start_date).months}")
+            st.write(f"Years difference: {relativedelta(end_date, start_date).years}")
+            st.write(f"Days remaining: {relativedelta(end_date, start_date).days}")
+            st.write(f"Current months in state: {st.session_state.get('months', 1)}")
+
+            # Form for item details
+            with st.form("add_item_form"):
+                item_name = st.text_input("Item Name")
+                
+                months = st.number_input(
+                    "Number of Months",
+                    value=st.session_state.months,
+                    min_value=1,
+                    disabled=True
+                )
+                
+                submitted = st.form_submit_button("Add Item")
+                
+                if submitted:
+                    if all([item_name, start_date, end_date]):
+                        item_data = {
+                            'Item Name': item_name,
+                            'Start Date': start_date,
+                            'End Date': end_date,
+                            'Months': st.session_state.months
+                        }
+                        st.session_state.data_manager.add_project_item(self.project_data['ID'], item_data)
+                        st.success("Item added successfully!")
+                        st.rerun()
+                    else:
+                        st.error("Please fill in all item fields.")
+        else:
+            # Rest of the code remains the same...

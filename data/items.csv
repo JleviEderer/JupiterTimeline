@@ -1,0 +1,333 @@
+Team,Item Name,Start Date,End Date,Months,Project ID,Item ID
+Interconnection,"SGIA
+  Securitization",2025-11-01,2025-11-30,1,JP0135,I001
+Interconnection,"Inverter Firm
+  Up Date",2026-03-01,2026-03-17,1,JP0135,I002
+Interconnection,"QSA Submittal
+  Deadline",2026-09-01,2026-09-17,1,JP0135,I003
+Interconnection,ISD - TSP,2027-04-15,2027-05-01,1,JP0135,I004
+Procurement,"Breaker
+  Procurement",2025-10-01,2027-08-01,23,JP0135,I005
+Procurement,"MPT
+  Procurement",2025-08-01,2027-08-01,25,JP0135,I006
+Procurement,"Battery
+  Procurement",2026-09-01,2027-06-01,10,JP0135,I007
+Procurement,"PCS
+  Procurement",2026-09-01,2027-06-01,10,JP0135,I008
+Construction,"EPC Agreement
+  Execution",2025-08-01,2025-12-01,5,JP0135,I009
+Construction,"Construction
+  Preparation",2025-12-01,2026-06-01,7,JP0135,I010
+Construction,Construction,2026-06-01,2027-06-01,13,JP0135,I011
+Construction,COD,2027-06-01,2027-12-01,7,JP0135,I012
+Interconnection,"SGIA
+  Securitization",2025-09-15,2025-10-01,1,JP0126,I026
+Interconnection,"Inverter Firm
+  Up Date",2027-03-01,2027-03-17,1,JP0126,I027
+Interconnection,"QSA Submittal
+  Deadline",2027-09-01,2027-09-17,1,JP0126,I028
+Interconnection,ISD - TSP,2028-04-01,2028-04-15,1,JP0126,I029
+Procurement,"Breaker
+  Procurement",2025-06-01,2028-03-01,34,JP0126,I030
+Procurement,"MPT
+  Procurement",2025-05-15,2028-03-01,35,JP0126,I031
+Procurement,"Battery
+  Procurement",2027-03-17,2028-01-17,11,JP0126,I032
+Procurement,"PCS
+  Procurement",2027-03-17,2028-01-17,11,JP0126,I033
+Construction,"EPC Agreement
+  Execution",2026-07-01,2026-11-01,5,JP0126,I034
+Construction,"Construction
+  Preparation",2026-11-01,2027-05-01,7,JP0126,I035
+Construction,Construction,2027-05-01,2028-02-01,10,JP0126,I036
+Construction,COD,2028-02-01,2028-06-01,5,JP0126,I037
+Interconnection,"SGIA
+  Securitization",2025-09-15,2025-10-01,1,JP0098,I038
+Interconnection,"Inverter Firm
+  Up Date",2027-03-01,2027-03-17,1,JP0098,I039
+Interconnection,"QSA Submittal
+  Deadline",2027-09-01,2027-09-17,1,JP0098,I040
+Interconnection,ISD - TSP,2028-04-01,2028-04-15,1,JP0098,I041
+Procurement,"Breaker
+  Procurement",2025-06-01,2028-03-01,34,JP0098,I042
+Procurement,"MPT
+  Procurement",2025-05-15,2028-03-01,35,JP0098,I043
+Procurement,"Battery
+  Procurement",2027-03-17,2028-01-17,11,JP0098,I044
+Procurement,"PCS
+  Procurement",2027-03-17,2028-01-17,11,JP0098,I045
+Construction,"EPC Agreement
+  Execution",2026-07-01,2026-11-01,5,JP0098,I046
+Construction,"Construction
+  Preparation",2026-11-01,2027-05-01,7,JP0098,I047
+Construction,Construction,2027-05-01,2028-02-01,10,JP0098,I048
+Construction,COD,2028-02-01,2028-06-01,5,JP0098,I049
+Development,"Notice
+  of Local Public Hearing",2024-11-29,2025-02-27,4,JP0018.1,I050
+Development,"Local
+  Compatible Ordinance?",2025-02-27,2025-03-29,2,JP0018.1,I051
+Development,"MPSC
+  Certificate Application",2025-03-29,2025-05-28,3,JP0018.1,I052
+Development,"MPSC
+  Certificate Application Review",2025-05-28,2026-05-28,13,JP0018.1,I053
+Development,"County Storm
+  Water Mgmt Approval",2026-03-01,2026-04-30,3,JP0018.1,I054
+Development,SESC Permit,2026-04-01,2026-05-01,2,JP0018.1,I055
+Development,EGLE NPDES,2025-05-01,2025-07-30,4,JP0018.1,I056
+Development,"Building
+  Permit",2026-05-28,2026-08-26,4,JP0018.1,I057
+Development,"Electrical
+  Permit",2026-05-28,2026-08-26,4,JP0018.1,I058
+Development,"Mechanical
+  Permit",2026-05-28,2026-08-26,4,JP0018.1,I059
+Development,"Fire Marshal
+  Approval",2025-05-01,2025-07-30,4,JP0018.1,I060
+Interconnection,SGIA Executed,2023-05-05,2023-05-26,1,JP0018.1,I061
+Interconnection,Cash Payment 3,2023-06-01,2024-10-01,17,JP0018.1,I013
+Interconnection,"Material
+  Modification",2026-09-04,2026-09-04,1,JP0018.1,I014
+Interconnection,"Request TSR
+  for Charging",2026-09-04,2026-09-04,1,JP0018.1,I015
+Interconnection,FERC EWG/M,2027-02-01,2027-02-01,1,JP0018.1,I016
+Interconnection,ISD,2027-04-02,2027-04-02,1,JP0018.1,I017
+Procurement,"Breaker
+  Procurement",2025-04-01,2027-02-01,23,JP0018.1,I018
+Procurement,"MPT
+  Procurement",2025-02-01,2027-02-01,25,JP0018.1,I019
+Procurement,"PCS
+  Procurement",2026-01-01,2027-01-01,13,JP0018.1,I020
+Procurement,"Battery
+  Procurement",2026-03-01,2026-12-01,10,JP0018.1,I021
+Construction,"EPC Agreement
+  Execution",2025-01-01,2025-07-01,7,JP0018.1,I022
+Construction,"Construction
+  Preparation",2025-07-01,2025-09-01,3,JP0018.1,I023
+Construction,Construction,2025-09-01,2026-12-01,16,JP0018.1,I024
+Construction,COD,2026-12-01,2027-06-01,7,JP0018.1,I025
+Interconnection,"SGIA
+  Securitization",2025-11-01,2025-11-30,1,JP0136,I001
+Interconnection,"Inverter Firm
+  Up Date",2026-03-01,2026-03-17,1,JP0136,I002
+Interconnection,"QSA Submittal
+  Deadline",2026-09-01,2026-09-17,1,JP0136,I003
+Interconnection,ISD - TSP,2027-04-15,2027-05-01,1,JP0136,I004
+Procurement,"Breaker
+  Procurement",2025-10-01,2027-08-01,23,JP0136,I005
+Procurement,"MPT
+  Procurement",2025-08-01,2027-08-01,25,JP0136,I006
+Procurement,"Battery
+  Procurement",2026-09-01,2027-06-01,10,JP0136,I007
+Procurement,"PCS
+  Procurement",2026-09-01,2027-06-01,10,JP0136,I008
+Construction,"EPC Agreement
+  Execution",2025-08-01,2025-12-01,5,JP0136,I009
+Construction,"Construction
+  Preparation",2025-12-01,2026-06-01,7,JP0136,I010
+Construction,Construction,2026-06-01,2027-06-01,13,JP0136,I011
+Construction,COD,2027-06-01,2027-12-01,7,JP0136,I012
+Interconnection,"SGIA
+  Securitization",2025-09-15,2025-10-01,1,JP0044,I001
+Interconnection,"Inverter Firm
+  Up Date",2027-03-01,2027-03-17,1,JP0044,I002
+Interconnection,"QSA Submittal
+  Deadline",2027-09-01,2027-09-17,1,JP0044,I003
+Interconnection,ISD - TSP,2028-04-01,2028-04-15,1,JP0044,I004
+Procurement,"Breaker
+  Procurement",2025-06-01,2028-03-01,34,JP0044,I005
+Procurement,"MPT
+  Procurement",2025-05-15,2028-03-01,35,JP0044,I006
+Procurement,"Battery
+  Procurement",2027-03-17,2028-01-17,11,JP0044,I007
+Procurement,"PCS
+  Procurement",2027-03-17,2028-01-17,11,JP0044,I008
+Construction,"EPC Agreement
+  Execution",2025-02-01,2025-06-01,5,JP0044,I009
+Construction,"Construction
+  Preparation",2025-06-01,2025-12-01,7,JP0044,I010
+Construction,Construction,2025-12-01,2026-12-01,13,JP0044,I011
+Construction,COD,2026-12-01,2027-06-01,7,JP0044,I012
+Development,"Real
+  Estate Items",2024-07-08,2025-01-01,6,JP0050.2,I001
+Development,Lender's Consent ,2025-01-21,2025-06-01,5,JP0050.2,I002
+Development,"Site Work
+  (Civil Package)",2025-02-28,2025-05-30,4,JP0050.2,I003
+Development,"BESS and
+  Substation Foundations 1",2025-03-30,2025-06-30,4,JP0050.2,I004
+Development,"Site Work
+  (Civil Package)",2025-02-28,2025-05-30,4,JP0050.2,I005
+Development,"Site Work
+  (Civil Package) Revision ",2025-05-30,2025-06-30,2,JP0050.2,I006
+Development,"BESS and
+  Substation Foundations Revision ",2025-06-30,2025-07-30,2,JP0050.2,I007
+Development,"Commercial
+  (Shell)",2024-05-01,2025-03-01,11,JP0050.2,I008
+Interconnection,IA Execution,2023-12-01,2023-12-11,1,JP0050.2,I009
+Interconnection,"Inverter Firm
+  Up Date",2025-01-01,2025-01-01,1,JP0050.2,I010
+Interconnection,"QSA Submittal
+  Package for Nov 1 Deadline",2025-09-17,2025-09-17,1,JP0050.2,I011
+Interconnection,ISD - TSP,2026-05-06,2026-05-06,1,JP0050.2,I012
+Procurement,"HV Breaker
+  Procurement",2024-03-12,2026-03-25,25,JP0050.2,I013
+Procurement,"MPT
+  Procurement",2023-10-27,2025-10-10,24,JP0050.2,I014
+Procurement,"PCS
+  Procurement",2024-10-10,2026-02-28,17,JP0050.2,I015
+Procurement,"Battery
+  Procurement A (Hithium) ",2024-07-03,2024-12-31,7,JP0050.2,I016
+Procurement,"Battery
+  Procurement B (CATL) ",2024-07-03,2025-01-20,7,JP0050.2,I017
+Construction,"EPC Agreement
+  Execution",2024-09-01,2025-02-01,6,JP0050.2,I018
+Construction,"Engineering
+  & Procurement ",2024-12-01,2025-06-01,7,JP0050.2,I019
+Construction,Construction,2025-06-30,2026-05-01,11,JP0050.2,I020
+Construction,COD,2026-05-01,2026-07-01,3,JP0050.2,I021
+Development,"Tax
+  abatement",2024-03-15,2024-08-15,6,JP0059.2,I001
+Development,"Lenders
+  Consent",2025-01-21,2025-04-01,3,JP0059.2,I002
+Interconnection,Execute IA,2025-01-14,2025-01-14,1,JP0059.2,I003
+Interconnection,"Post NTP
+  Security",2025-01-16,2025-01-16,1,JP0059.2,I004
+Interconnection,"Restudy to
+  finalize inverter",2025-02-01,2025-06-01,5,JP0059.2,I005
+Interconnection,QSA,2025-08-01,2025-08-01,1,JP0059.2,I006
+Interconnection,ISD,2026-01-01,2026-01-01,1,JP0059.2,I007
+Procurement,"Breaker
+  Procurement",2021-06-01,2025-05-31,49,JP0059.2,I008
+Procurement,"MPT
+  Procurement",2023-02-01,2025-12-01,35,JP0059.2,I009
+Procurement,"PCS
+  Procurement",2024-07-01,2025-09-15,15,JP0059.2,I010
+Procurement,"Battery
+  Procurement",2024-09-01,2025-01-20,5,JP0059.2,I011
+Construction,"EPC Agreement
+  Execution",2024-11-01,2025-02-01,4,JP0059.2,I012
+Construction,"Construction
+  Preparation",2024-11-01,2025-04-01,6,JP0059.2,I013
+Construction,Construction,2025-04-01,2026-01-01,10,JP0059.2,I014
+Construction,COD,2026-01-01,2026-04-01,4,JP0059.2,I015
+Development,Permit ,2025-01-31,2026-01-31,13,JP0018.2,I001
+Development,Mechanical Permit,2025-09-30,2025-12-01,3,JP0018.2,I002
+Development,Building Permit,2025-09-30,2025-12-01,3,JP0018.2,I003
+Development,Electrical Permit,2025-09-30,2025-12-01,3,JP0018.2,I004
+Development,"Commercial
+  Obligation ",2027-03-01,2027-03-01,1,JP0018.2,I005
+Interconnection,"DP2 to Phase 3
+  Completion",2025-01-31,2025-03-28,2,JP0018.2,I006
+Interconnection,"GIA
+  Negotiation",2025-01-31,2025-08-10,7,JP0018.2,I007
+Interconnection,GIA signed,2025-08-10,2025-08-10,1,JP0018.2,I008
+Interconnection,ISD,2025-08-10,2026-11-04,16,JP0018.2,I009
+Procurement,"Breaker
+  Procurement",2024-09-15,2026-10-25,26,JP0018.2,I010
+Procurement,"MPT
+  Procurement",2024-09-15,2026-11-30,27,JP0018.2,I011
+Procurement,"Battery
+  Procurement",2024-11-15,2025-01-20,3,JP0018.2,I012
+Procurement,"PCS
+  Procurement",2025-03-30,2026-03-30,13,JP0018.2,I013
+Construction,"EPC Agreement
+  Execution",2025-02-01,2025-06-01,5,JP0018.2,I014
+Construction,"Construction
+  Preparation",2025-06-01,2025-12-01,7,JP0018.2,I015
+Construction,Construction,2025-12-01,2026-12-01,13,JP0018.2,I016
+Construction,COD,2026-12-01,2027-03-01,4,JP0018.2,I017
+Development,Other,2023-10-01,2024-03-01,6,JP0058,I001
+Development,Other,2024-02-01,2025-01-01,12,JP0058,I002
+Development,Other,2024-10-01,2026-01-01,16,JP0058,I003
+Development,Other,2023-12-01,2024-03-01,4,JP0058,I004
+Development,Other,2024-02-01,2025-01-01,12,JP0058,I005
+Development,Other,2023-11-01,2026-01-01,27,JP0058,I006
+Development,Other,2024-11-01,2027-12-01,38,JP0058,I007
+Development,Permitting 1,2024-01-01,2025-01-01,13,JP0058,I008
+Development,Permitting 2,2024-01-01,2025-01-01,13,JP0058,I009
+Development,Permitting 3,2025-09-01,2026-01-01,5,JP0058,I010
+Development,Permitting 4,2024-02-01,2025-03-01,14,JP0058,I011
+Development,Permitting 5,2024-02-01,2025-01-01,12,JP0058,I012
+Development,Permitting 6,2025-11-01,2026-01-01,3,JP0058,I013
+Development,Commercial 1,2025-02-01,2027-05-01,28,JP0058,I014
+Development,Commercial 2,2025-03-01,2025-05-01,3,JP0058,I015
+Development,Commercial 3,2023-10-01,2026-01-01,28,JP0058,I016
+Development,Land 1,2023-10-01,2025-03-01,18,JP0058,I017
+Development,Land 2,2024-02-01,2025-01-01,12,JP0058,I018
+Development,Land 3,2023-11-01,2025-11-01,25,JP0058,I019
+Interconnection,"Interconnection
+  1",2023-10-01,2025-12-01,27,JP0058,I020
+Interconnection,"Interconnection
+  2",2025-02-28,2024-02-01,1,JP0058,I021
+Interconnection,"Interconnection
+  3",2024-02-01,2025-03-15,14,JP0058,I022
+Interconnection,"Interconnection
+  4",2025-03-15,2025-10-01,7,JP0058,I023
+Interconnection,"Interconnection
+  5",2025-10-01,2026-11-01,14,JP0058,I024
+Interconnection,"Interconnection
+  6",2025-11-01,2025-12-01,2,JP0058,I025
+Procurement,"Breaker
+  Procurement",2025-04-01,2027-12-01,33,JP0058,I026
+Procurement,"MPT
+  Procurement",2025-12-01,2027-12-01,25,JP0058,I027
+Procurement,"Battery
+  Procurement",2027-01-01,2027-10-01,10,JP0058,I028
+Procurement,"PCS
+  Procurement",2023-10-01,2024-01-01,4,JP0058,I029
+Construction,"EPC Agreement
+  Execution",2025-04-01,2025-10-01,7,JP0058,I030
+Construction,"Construction
+  Preparation",2025-10-01,2025-12-01,3,JP0058,I031
+Construction,Construction,2025-12-01,2027-10-01,23,JP0058,I032
+Construction,COD,2027-10-01,2028-04-01,7,JP0058,I033
+Development,"Permitting
+  1",2024-01-01,2025-01-01,13,JP0082,I001
+Development,Permitting 2,2024-01-01,2025-01-01,13,JP0082,I002
+Development,Permitting 3,2025-09-01,2026-01-01,5,JP0082,I003
+Development,Commercial 1,2025-02-01,2027-05-01,28,JP0082,I004
+Development,Commercial 2,2025-03-01,2025-05-01,3,JP0082,I005
+Development,Land 1,2023-10-01,2025-03-01,18,JP0082,I006
+Interconnection,DP1,2025-05-02,2025-08-12,4,JP0082,I007
+Interconnection,DP2,2025-08-12,2025-10-07,2,JP0082,I008
+Interconnection,"Phase 3
+  Completion",2025-10-07,2025-10-07,1,JP0082,I009
+Interconnection,GIA Executed,2026-02-19,2026-02-19,1,JP0082,I010
+Interconnection,"ISD -
+  Linebreak",2026-02-19,2027-10-31,21,JP0082,I011
+Procurement,"Breaker
+  Procurement",2025-02-18,2027-09-01,31,JP0082,I012
+Procurement,"MPT
+  Procurement",2025-02-18,2027-09-30,32,JP0082,I013
+Procurement,"Battery
+  Procurement",2027-01-01,2027-11-01,11,JP0082,I014
+Procurement,"PCS
+  Procurement",2027-02-01,2027-12-01,11,JP0082,I015
+Construction,"EPC Agreement
+  Execution",2026-08-01,2026-12-01,5,JP0082,I016
+Construction,"Construction
+  Preparation",2026-12-01,2027-05-01,6,JP0082,I017
+Construction,Construction,2027-05-01,2028-02-01,10,JP0082,I018
+Construction,"COD
+  (Realistic)",2028-02-01,2028-05-01,4,JP0082,I019
+Construction,"COD (Consumers
+  Commitment)",2027-12-01,2027-12-01,1,JP0082,I020
+Interconnection,"SGIA
+  Securitization",2025-09-01,2025-09-13,1,JP0095,I001
+Interconnection,"Inverter Firm
+  Up Date",2026-12-01,2026-12-17,1,JP0095,I002
+Interconnection,"QSA Submittal
+  Deadline",2027-06-01,2027-06-17,1,JP0095,I003
+Interconnection,ISD - TSP,2028-01-01,2028-01-13,1,JP0095,I004
+Procurement,"Breaker
+  Procurement",2025-06-01,2028-03-01,34,JP0095,I005
+Procurement,"MPT
+  Procurement",2025-05-15,2028-03-01,35,JP0095,I006
+Procurement,"Battery
+  Procurement",2027-03-17,2028-01-17,11,JP0095,I007
+Procurement,"PCS
+  Procurement",2027-03-17,2028-01-17,11,JP0095,I008
+Construction,"EPC Agreement
+  Execution",2026-06-01,2026-10-01,5,JP0095,I009
+Construction,"Construction
+  Preparation",2026-10-01,2027-04-01,7,JP0095,I010
+Construction,Construction,2027-04-01,2028-02-01,11,JP0095,I011
+Construction,COD,2028-02-01,2028-06-01,5,JP0095,I012

@@ -1,0 +1,120 @@
+import streamlit as st
+from datetime import datetime
+import pandas as pd
+from dateutil.relativedelta import relativedelta
+
+class ProjectForm:
+    def __init__(self, edit_mode=False, project_data=None):
+        self.edit_mode = edit_mode
+        self.project_data = project_data
+        
+        # Initialize session state for dates if not exists
+        if 'start_date' not in st.session_state:
+            st.session_state.start_date = datetime.now().date()
+        if 'end_date' not in st.session_state:
+            st.session_state.end_date = datetime.now().date()
+        if 'months' not in st.session_state:
+            st.session_state.months = 1
+
+    def calculate_months(self, start_date, end_date):
+        """Calculate the number of months between two dates, including partial months"""
+        if start_date and end_date:
+            if end_date < start_date:
+                return 1
+            r = relativedelta(end_date, start_date)
+            months = r.years * 12 + r.months
+            if r.days > 0:
+                months += 1
+            return max(1, months)
+        return 1
+
+    def update_months(self):
+        """Callback to update months when dates change"""
+        st.session_state.months = self.calculate_months(
+            st.session_state.start_date,
+            st.session_state.end_date
+        )
+
+    def render(self):
+        if self.edit_mode:
+            # Project Details Form
+            with st.form("project_form"):
+                project_id = st.text_input(
+                    "ID",
+                    value=self.project_data['ID'],
+                    disabled=True
+                )
+                name = st.text_input(
+                    "Name",
+                    value=self.project_data['Name']
+                )
+                project_submitted = st.form_submit_button("Update Project")
+
+                if project_submitted:
+                    if all([project_id, name]):
+                        project_details = {
+                            'ID': project_id,
+                            'Name': name
+                        }
+                        st.session_state.data_manager.update_project(project_details['ID'], project_details)
+                        st.success("Project updated successfully!")
+                        st.rerun()
+                    else:
+                        st.error("Please fill in all project fields.")
+
+            # Items Management
+            st.subheader("Project Items")
+            items_df = st.session_state.data_manager.get_project_items(self.project_data['ID'])
+
+            # Display existing items
+            if not items_df.empty:
+                st.dataframe(items_df[['Item Name', 'Start Date', 'End Date', 'Months']])
+
+            # Item input fields
+            item_name = st.text_input("Item Name")
+            
+            col1, col2 = st.columns(2)
+            with col1:
+                start_date = st.date_input(
+                    "Start Date",
+                    value=st.session_state.start_date,
+                    key="start_date",
+                    on_change=self.update_months
+                )
+            
+            with col2:
+                end_date = st.date_input(
+                    "End Date",
+                    value=st.session_state.end_date,
+                    key="end_date",
+                    on_change=self.update_months
+                )
+
+            # Display calculated months
+            months = st.number_input(
+                "Number of Months",
+                value=st.session_state.months,
+                min_value=1,
+                disabled=True,
+                key="months_display"
+            )
+
+            # Add item form
+            with st.form("add_item_form"):
+                submitted = st.form_submit_button("Add Item")
+                
+                if submitted:
+                    if all([item_name, start_date, end_date]):
+                        item_data = {
+                            'Item Name': item_name,
+                            'Start Date': start_date,
+                            'End Date': end_date,
+                            'Months': st.session_state.months
+                        }
+                        st.session_state.data_manager.add_project_item(self.project_data['ID'], item_data)
+                        st.success("Item added successfully!")
+                        st.rerun()
+                    else:
+                        st.error("Please fill in all item fields.")
+        else:
+            # Rest of the code remains the same...

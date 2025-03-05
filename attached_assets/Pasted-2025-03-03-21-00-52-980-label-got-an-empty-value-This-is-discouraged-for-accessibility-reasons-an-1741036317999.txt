@@ -1,0 +1,21 @@
+2025-03-03 21:00:52.980 `label` got an empty value. This is discouraged for accessibility reasons and may be disallowed in the future by raising an exception. Please provide a non-empty label and hide it with label_visibility if needed.
+2025-03-03 21:00:53.659 `label` got an empty value. This is discouraged for accessibility reasons and may be disallowed in the future by raising an exception. Please provide a non-empty label and hide it with label_visibility if needed.
+2025-03-03 21:00:53.661 `label` got an empty value. This is discouraged for accessibility reasons and may be disallowed in the future by raising an exception. Please provide a non-empty label and hide it with label_visibility if needed.
+2025-03-03 21:10:59.930 An update to the [server] config option section was detected. To have these changes be reflected, please restart streamlit.
+2025-03-03 21:10:59.930 
+Warning: the config option 'server.enableCORS=false' is not compatible with 'server.enableXsrfProtection=true'.
+As a result, 'server.enableCORS' is being overridden to 'true'.
+
+More information:
+In order to protect against CSRF attacks, we send a cookie with each request.
+To do so, we must specify allowable origins, which places a restriction on
+cross-origin resource sharing.
+
+If cross origin resource sharing is required, please disable server.enableXsrfProtection.
+2025-03-03 21:11:22.448 304 GET / (172.31.128.88) 0.72ms
+2025-03-03 21:11:23.828 304 GET /_stcore/health (172.31.128.88) 0.54ms
+2025-03-03 21:11:23.884 304 GET /_stcore/host-config (172.31.128.88) 0.38ms
+2025-03-03 21:11:24.099 101 GET /_stcore/stream (172.31.128.88) 0.54ms
+2025-03-03 21:11:25.420 `label` got an empty value. This is discouraged for accessibility reasons and may be disallowed in the future by raising an exception. Please provide a non-empty label and hide it with label_visibility if needed.
+2025-03-03 21:11:25.824 `label` got an empty value. This is discouraged for accessibility reasons and may be disallowed in the future by raising an exception. Please provide a non-empty label and hide it with label_visibility if needed.
+2025-03-03 21:11:25.826 `label` got an empty value. This is discouraged for accessibility reasons and may be disallowed in the future by raising an exception. Please provide a non-empty label and hide it with label_visibility if needed.

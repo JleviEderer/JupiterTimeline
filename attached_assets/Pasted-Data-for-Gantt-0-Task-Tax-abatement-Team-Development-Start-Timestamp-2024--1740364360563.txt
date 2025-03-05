@@ -1,0 +1,100 @@
+Data for Gantt:
+
+[
+0:{
+"Task":"Tax   abatement"
+"Team":"Development"
+"Start":"Timestamp('2024-03-15 00:00:00')"
+"Finish":"Timestamp('2024-08-15 00:00:00')"
+}
+1:{
+"Task":"Lenders   Consent"
+"Team":"Development"
+"Start":"Timestamp('2025-01-21 00:00:00')"
+"Finish":"Timestamp('2025-04-01 00:00:00')"
+}
+2:{
+"Task":"Execute IA"
+"Team":"Interconnection"
+"Start":"Timestamp('2025-01-14 00:00:00')"
+"Finish":"Timestamp('2025-01-14 00:00:00')"
+}
+3:{
+"Task":"Post NTP   Security"
+"Team":"Interconnection"
+"Start":"Timestamp('2025-01-16 00:00:00')"
+"Finish":"Timestamp('2025-01-16 00:00:00')"
+}
+4:{
+"Task":"Restudy to   finalize inverter"
+"Team":"Interconnection"
+"Start":"Timestamp('2025-02-01 00:00:00')"
+"Finish":"Timestamp('2025-06-01 00:00:00')"
+}
+5:{
+"Task":"QSA"
+"Team":"Interconnection"
+"Start":"Timestamp('2025-08-01 00:00:00')"
+"Finish":"Timestamp('2025-08-01 00:00:00')"
+}
+6:{
+"Task":"ISD"
+"Team":"Interconnection"
+"Start":"Timestamp('2026-01-01 00:00:00')"
+"Finish":"Timestamp('2026-01-01 00:00:00')"
+}
+7:{
+"Task":"COD"
+"Team":"Interconnection"
+"Start":"Timestamp('2026-03-01 00:00:00')"
+"Finish":"Timestamp('2026-03-01 00:00:00')"
+}
+8:{
+"Task":"Breaker   Procurement"
+"Team":"Procurement"
+"Start":"Timestamp('2021-06-01 00:00:00')"
+"Finish":"Timestamp('2025-05-31 00:00:00')"
+}
+9:{
+"Task":"MPT   Procurement"
+"Team":"Procurement"
+"Start":"Timestamp('2023-02-01 00:00:00')"
+"Finish":"Timestamp('2025-12-01 00:00:00')"
+}
+10:{
+"Task":"PCS   Procurement"
+"Team":"Procurement"
+"Start":"Timestamp('2024-07-01 00:00:00')"
+"Finish":"Timestamp('2025-09-15 00:00:00')"
+}
+11:{
+"Task":"Battery   Procurement"
+"Team":"Procurement"
+"Start":"Timestamp('2024-09-01 00:00:00')"
+"Finish":"Timestamp('2025-01-20 00:00:00')"
+}
+12:{
+"Task":"EPC Agreement   Execution"
+"Team":"Construction"
+"Start":"Timestamp('2024-11-01 00:00:00')"
+"Finish":"Timestamp('2025-02-01 00:00:00')"
+}
+13:{
+"Task":"Construction   Preparation"
+"Team":"Construction"
+"Start":"Timestamp('2024-11-01 00:00:00')"
+"Finish":"Timestamp('2025-04-01 00:00:00')"
+}
+14:{
+"Task":"Construction"
+"Team":"Construction"
+"Start":"Timestamp('2025-04-01 00:00:00')"
+"Finish":"Timestamp('2026-01-01 00:00:00')"
+}
+15:{
+"Task":"COD"
+"Team":"Construction"
+"Start":"Timestamp('2026-01-01 00:00:00')"
+"Finish":"Timestamp('2026-04-01 00:00:00')"
+}
+]

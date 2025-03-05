@@ -1,0 +1,99 @@
+import streamlit as st
+from datetime import datetime
+import pandas as pd
+from dateutil.relativedelta import relativedelta
+
+class ProjectForm:
+    def __init__(self, edit_mode=False, project_data=None):
+        self.edit_mode = edit_mode
+        self.project_data = project_data
+
+    def calculate_months(self, start_date, end_date):
+        """Calculate the number of months between two dates, including partial months"""
+        if start_date and end_date:
+            if end_date < start_date:
+                return 1
+            r = relativedelta(end_date, start_date)
+            months = r.years * 12 + r.months
+            if r.days > 0:
+                months += 1
+            return max(1, months)
+        return 1
+
+    def render(self):
+        if self.edit_mode:
+            # Project Details Form
+            with st.form("project_form"):
+                project_id = st.text_input(
+                    "ID",
+                    value=self.project_data['ID'],
+                    disabled=True
+                )
+                name = st.text_input(
+                    "Name",
+                    value=self.project_data['Name']
+                )
+                project_submitted = st.form_submit_button("Update Project")
+
+                project_details = {
+                    'ID': project_id,
+                    'Name': name
+                }
+
+                if project_submitted:
+                    if all(project_details.values()):
+                        st.session_state.data_manager.update_project(project_details['ID'], project_details)
+                        st.success("Project updated successfully!")
+                        st.rerun()
+                    else:
+                        st.error("Please fill in all project fields.")
+
+            # Items Management
+            st.subheader("Project Items")
+            items_df = st.session_state.data_manager.get_project_items(self.project_data['ID'])
+
+            # Display existing items
+            if not items_df.empty:
+                st.dataframe(items_df[['Item Name', 'Start Date', 'End Date', 'Months']])
+            
+            # Date inputs outside the form
+            item_name = st.text_input("Item Name", key="item_name_input")
+            col1, col2 = st.columns(2)
+            
+            with col1:
+                start_date = st.date_input("Start Date", 
+                                         value=datetime.now().date(),
+                                         key="start_date_input")
+            with col2:
+                end_date = st.date_input("End Date", 
+                                       value=datetime.now().date(),
+                                       key="end_date_input")
+            
+            # Calculate months based on current values
+            months = self.calculate_months(start_date, end_date)
+            
+            # Display calculated months
+            st.number_input("Number of Months", 
+                           value=months,
+                           min_value=1,
+                           disabled=True,
+                           key="months_display")
+            
+            # Separate form just for the submit button
+            with st.form("add_item_form"):
+                submitted = st.form_submit_button("Add Item")
+                if submitted:
+                    if all([item_name, start_date, end_date]):
+                        item_data = {
+                            'Item Name': item_name,
+                            'Start Date': start_date,
+                            'End Date': end_date,
+                            'Months': months
+                        }
+                        st.session_state.data_manager.add_project_item(self.project_data['ID'], item_data)
+                        st.success("Item added successfully!")
+                        st.rerun()
+                    else:
+                        st.error("Please fill in all item fields.")
+        else:
+            # Rest of the code remains the same...

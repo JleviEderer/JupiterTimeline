@@ -1,0 +1,38 @@
+{
+    "team_colors": {
+        "Procurement": "#2196F3",
+        "Construction": "#FF9800",
+        "Development": "#4CAF50",
+        "Interconnection": "#9C27B0"
+    },
+    "date_presets": {
+        "This Month": [
+            "2025-02-01",
+            "2025-03-01"
+        ],
+        "Next 3 Months": [
+            "2025-02-01",
+            "2025-05-01"
+        ],
+        "Next 6 Months": [
+            "2025-02-01",
+            "2025-08-01"
+        ],
+        "This Year": [
+            "2025-01-01",
+            "2026-01-01"
+        ],
+        "All Time": [
+            "",
+            ""
+        ]
+    },
+    "default_view": "timeline",
+    "user_preferences": {
+        "show_weekends": true,
+        "show_critical_path": false,
+        "collapse_teams": false,
+        "auto_save": true,
+        "theme": "light"
+    }
+}
