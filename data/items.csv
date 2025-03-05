@@ -331,3 +331,45 @@ Construction,"Construction
   Preparation",2026-10-01,2027-04-01,7,JP0095,I010
 Construction,Construction,2027-04-01,2028-02-01,11,JP0095,I011
 Construction,COD,2028-02-01,2028-06-01,5,JP0095,I012
+Interconnection,"SGIA
+  Securitization",2025-09-15,2025-10-01,1,JP0127,I001
+Interconnection,"Inverter Firm
+  Up Date",2027-03-01,2027-03-17,1,JP0127,I002
+Interconnection,"QSA Submittal
+  Deadline",2027-09-01,2027-09-17,1,JP0127,I003
+Interconnection,ISD - TSP,2028-04-01,2028-04-15,1,JP0127,I004
+Procurement,"Breaker
+  Procurement",2025-06-01,2028-03-01,34,JP0127,I005
+Procurement,"MPT
+  Procurement",2025-05-15,2028-03-01,35,JP0127,I006
+Procurement,"Battery
+  Procurement",2027-03-17,2028-01-17,11,JP0127,I007
+Procurement,"PCS
+  Procurement",2027-03-17,2028-01-17,11,JP0127,I008
+Construction,"EPC Agreement
+  Execution",2025-12-01,2026-04-01,5,JP0127,I009
+Construction,"Construction
+  Preparation",2026-04-01,2026-10-01,7,JP0127,I010
+Construction,Construction,2026-10-01,2027-12-01,15,JP0127,I011
+Construction,COD,2027-12-01,2028-06-01,7,JP0127,I012
+Interconnection,"SGIA
+  Securitization",2025-09-15,2025-10-01,1,JP0059,I001
+Interconnection,"Inverter Firm
+  Up Date",2026-06-01,2026-06-18,1,JP0059,I002
+Interconnection,"QSA Submittal
+  Deadline",2026-12-01,2026-12-18,1,JP0059,I003
+Interconnection,ISD - TSP,2027-08-15,2027-09-01,1,JP0059,I004
+Procurement,"Breaker
+  Procurement",2025-09-15,2028-06-15,34,JP0059,I005
+Procurement,"MPT
+  Procurement",2025-09-15,2028-06-15,34,JP0059,I006
+Procurement,"Battery
+  Procurement",2027-08-01,2028-06-15,11,JP0059,I007
+Procurement,"PCS
+  Procurement",2027-08-01,2028-06-15,11,JP0059,I008
+Construction,"EPC Agreement
+  Execution",2026-06-01,2026-10-01,5,JP0059,I009
+Construction,"Construction
+  Preparation",2026-10-01,2027-04-01,7,JP0059,I010
+Construction,Construction,2027-04-01,2028-02-01,11,JP0059,I011
+Construction,COD,2028-02-01,2028-12-01,11,JP0059,I012
