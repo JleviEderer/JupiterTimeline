@@ -20,8 +20,8 @@ echo "Using Python: $($PYTHON_CMD --version)"
 # Check if required packages are installed
 $PYTHON_CMD -c "import streamlit" 2>/dev/null || $PYTHON_CMD -m pip install -r requirements.txt
 
-# Start health check server in background
-echo "Starting health check server..."
+# Start health check server in background on port 8080
+echo "Starting health check server on port 8080..."
 $PYTHON_CMD health_check.py &
 HEALTH_PID=$!
 
