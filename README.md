@@ -19,7 +19,17 @@ Company XYZ Project Management is a comprehensive Streamlit web application desi
 
 ## Screenshots
 
-_[Add screenshots of your application here]_
+![image](image_2.png)
+The Dashboard tab provides a comprehensive overview of all projects and their timelines. It features a Team Deadlines Chart that visualizes when each team's work concludes across all projects. The chart is highly customizable - you can filter by ISO region, adjust date ranges, and modify the time interval for better visualization. This tab helps identify potential scheduling conflicts and gives a bird's-eye view of our entire project portfolio.
+
+![image](image_3.png)
+The Critical Path tab displays detailed timeline visualizations for individual projects. After selecting a project from the dropdown menu, you'll see a Gantt chart showing all project items arranged chronologically with color-coding by team. The timeline clearly marks today's date and allows for customization of the chart display, including date ranges and chart height. This view is essential for tracking individual project progress and identifying potential bottlenecks in the schedule
+
+![image](image_4.png)
+The Add Project tab provides a streamlined form for creating new projects in the system. Users can enter basic project information including ID, name, ISO region, voltage, capacity, duration, and target COD (Commercial Operation Date). The form includes validation to ensure all required fields are completed before submission. This tab allows for quick addition of new projects that will then appear in the dashboard and critical path views.
+
+![image](image_5.png)
+The Edit Project tab enables comprehensive management of existing projects. After selecting a project from the dropdown, users can modify project details, add new timeline items, and edit existing ones. The interface includes an overview section showing project details, an items management section with auto-save capability, and the ability to delete projects when needed. This tab serves as the main workflow for maintaining and updating project data as timelines evolve
 
 ## Technology Stack
 
@@ -117,15 +127,6 @@ This project follows PEP 8 style guidelines for Python code.
 - Advanced filtering and search capabilities
 - Email notifications for approaching deadlines
 
-## License
 
-[Specify your license here]
 
-## Contributors
 
-- [Your Name](https://github.com/yourusername)
-
-## Acknowledgements
-
-- Streamlit for the excellent web app framework
-- Plotly for powerful data visualization capabilities
